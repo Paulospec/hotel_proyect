@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="">Habitaciones</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="">Ofertas</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="linkser"><a href="../index.html">Inicio</a>
+            <a href="/pages/habitaciones.html">Habitaciones</a>
+            <a href="">Servicios</a>
+            <a href="">Ofertas</a>
+        </div>
+
+        <div class="linklog"><a href="">Login</a></div>
     </header>
     <div class="container">
         <div class="contact-header">
@@ -38,6 +37,11 @@
                     <div class="form-group">
                         <label for="telefono">Teléfono</label>
                         <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div>
+                        <label for="mensaje">Mensaje *</label>
+                        <br>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">Enviar mensaje</button>
