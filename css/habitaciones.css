@@ -34,6 +34,7 @@ body {
 }
 .imagen{
     height: 300px;
+    border-color: black;
 }
 .habitacion.descripcion {
     max-width: 800px;
