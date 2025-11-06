@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,146 +8,136 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/habitaciones.css">
 </head>
-<body>
-    <header class="header">
-        <div class="linkser"><a href="../index.html">Inicio</a>
-            <a href="/pages/habitaciones.html">Habitaciones</a>
-            <a href="">Servicios</a>
-            <a href="">Ofertas</a>
-        </div>
 
-        <div class="linklog"><a href="">Login</a></div>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"><a href="../index.html">Hotel Paraíso</a></div>
+        <nav>
+            <div class="linkser">
+                <a href="../index.html">Inicio</a>
+                <a href="habitaciones.html" class="active">Habitaciones</a>
+                <a href="">Servicios</a>
+                <a href="">Ofertas</a>
+            </div>
+            <div class="linklog"><a href="login.html">Login</a></div>
+        </nav>
     </header>
 
-    <main>
-        <section class="rooms-hero">
-            <div class="hero-content">
-                <h1>Nuestras Habitaciones</h1>
-                <p>Descubre el confort y elegancia de nuestros espacios cuidadosamente diseñados para tu descanso</p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="rooms-hero">
+        <div class="hero-content">
+            <h1>Nuestras Habitaciones</h1>
+            <p>Descubre el confort y elegancia de nuestros espacios cuidadosamente diseñados para tu descanso</p>
+        </div>
+    </section>
 
-        <section class="rooms-section">
-            <div class="container">
-                <div class="rooms-grid">
-                    <!-- Habitación 1 -->
-                    <div class="room-card" data-type="standard" data-price="80">
-                        <div class="room-image">
-                            <img src="/imagenes/habitacion_standar.png" alt="Habitación Standard">
-                            <div class="room-price">$80/noche</div>
+    <!-- Rooms Grid -->
+    <main class="rooms-section">
+        <div class="container">
+            <div class="rooms-grid">
+                <!-- Habitación Standard -->
+                <div class="room-card standard">
+                    <img src="/imagenes/habitacion_standar.png" alt="Habitación Standard">
+                    <div class="room-info">
+                        <h3>Habitación Standard</h3>
+                        <p>Cómoda habitación con todas las comodidades esenciales para una estancia placentera.</p>
+                        <ul class="amenities">
+                            <li>2 Personas</li>
+                            <li>1 Cama doble</li>
+                            <li>WiFi gratis</li>
+                            <li>TV LED</li>
+                            <li>Aire acondicionado</li>
+                            <li>Baño privado</li>
+                        </ul>
+                        <div class="room-actions">
+                            <a href="reserva.html?room=standard" class="btn-primary">Reservar ahora</a>
+                            <a href="habitacion-standard.html" class="btn-secondary">Ver detalles</a>
                         </div>
-                        <div class="room-content">
-                            <h3>Habitación Standard</h3>
-                            <p class="room-description">Cómoda habitación con todas las comodidades esenciales para una estancia placentera.</p>
-                            <div class="room-features">
-                                <span><i class="fas fa-user"></i> 2 Personas</span>
-                                <span><i class="fas fa-bed"></i> 1 Cama doble</span>
-                                <span><i class="fas fa-ruler-combined"></i> 25m²</span>
-                            </div>
-                            <ul class="room-amenities">
-                                <li><i class="fas fa-wifi"></i> WiFi gratis</li>
-                                <li><i class="fas fa-tv"></i> TV LED</li>
-                                <li><i class="fas fa-snowflake"></i> Aire acondicionado</li>
-                                <li><i class="fas fa-bath"></i> Baño privado</li>
-                            </ul>
-                            <div class="room-actions">
-                                <a href="reserva.html?room=standard" class="btn-primary">Reservar ahora</a>
-                                <a href="habitacion-standard.html" class="btn-secondary">Ver detalles</a>
-                            </div>
-                        </div>
+                        <div class="room-price">$80/noche</div>
                     </div>
+                </div>
 
-                    <!-- Habitación 2 -->
-                    <div class="room-card" data-type="deluxe" data-price="120">
-                        <div class="room-image">
-                            <img src="/imagenes/habitacion_deluxe.png" alt="Habitación Deluxe">
-                            <div class="room-price">$120/noche</div>
+                <!-- Habitación Deluxe -->
+                <div class="room-card deluxe">
+                    <img src="/imagenes/habitacion_deluxe.png" alt="Habitación Deluxe">
+                    <div class="room-info">
+                        <h3>Habitación Deluxe</h3>
+                        <p>Amplia habitación con vista privilegiada y amenities de lujo para una experiencia superior.</p>
+                        <ul class="amenities">
+                            <li>3 Personas</li>
+                            <li>2 Camas</li>
+                            <li>WiFi gratis</li>
+                            <li>TV 40"</li>
+                            <li>Aire acondicionado</li>
+                            <li>Baño con jacuzzi</li>
+                            <li>Minibar</li>
+                        </ul>
+                        <div class="room-actions">
+                            <a href="reserva.html?room=deluxe" class="btn-primary">Reservar ahora</a>
+                            <a href="habitacion-deluxe.html" class="btn-secondary">Ver detalles</a>
                         </div>
-                        <div class="room-content">
-                            <h3>Habitación Deluxe</h3>
-                            <p class="room-description">Amplia habitación con vista privilegiada y amenities de lujo para una experiencia superior.</p>
-                            <div class="room-features">
-                                <span><i class="fas fa-user"></i> 3 Personas</span>
-                                <span><i class="fas fa-bed"></i> 2 Camas</span>
-                                <span><i class="fas fa-ruler-combined"></i> 35m²</span>
-                            </div>
-                            <ul class="room-amenities">
-                                <li><i class="fas fa-wifi"></i> WiFi gratis</li>
-                                <li><i class="fas fa-tv"></i> TV 40"</li>
-                                <li><i class="fas fa-snowflake"></i> Aire acondicionado</li>
-                                <li><i class="fas fa-bath"></i> Baño con jacuzzi</li>
-                                <li><i class="fas fa-coffee"></i> Minibar</li>
-                            </ul>
-                            <div class="room-actions">
-                                <a href="reserva.html?room=deluxe" class="btn-primary">Reservar ahora</a>
-                                <a href="habitacion-deluxe.html" class="btn-secondary">Ver detalles</a>
-                            </div>
-                        </div>
+                        <div class="room-price">$120/noche</div>
                     </div>
+                </div>
 
-                    <!-- Habitación 3 -->
-                    <div class="room-card" data-type="suite" data-price="200">
-                        <div class="room-image">
-                            <img src="/imagenes/habitacion_suite.png" alt="Suite Premium">
-                            <div class="room-price">$200/noche</div>
-                            <div class="room-badge">Lujo</div>
+                <!-- Suite Premium -->
+                <div class="room-card suite">
+                    <img src="/imagenes/habitacion_suite.png" alt="Suite Premium">
+                    <div class="room-info">
+                        <h3>Suite Premium</h3>
+                        <p>La máxima expresión de confort y elegancia con sala de estar separada y amenities exclusivos.</p>
+                        <ul class="amenities">
+                            <li>4 Personas</li>
+                            <li>2 Dormitorios</li>
+                            <li>WiFi premium</li>
+                            <li>Smart TV 55"</li>
+                            <li>Aire acondicionado</li>
+                            <li>Baño con jacuzzi</li>
+                            <li>Minibar premium</li>
+                            <li>Servicio a la habitación</li>
+                        </ul>
+                        <div class="room-actions">
+                            <a href="reserva.html?room=suite" class="btn-primary">Reservar ahora</a>
+                            <a href="suite-premium.html" class="btn-secondary">Ver detalles</a>
                         </div>
-                        <div class="room-content">
-                            <h3>Suite Premium</h3>
-                            <p class="room-description">La máxima expresión de confort y elegancia con sala de estar separada y amenities exclusivos.</p>
-                            <div class="room-features">
-                                <span><i class="fas fa-user"></i> 4 Personas</span>
-                                <span><i class="fas fa-bed"></i> 2 Dormitorios</span>
-                                <span><i class="fas fa-ruler-combined"></i> 60m²</span>
-                            </div>
-                            <ul class="room-amenities">
-                                <li><i class="fas fa-wifi"></i> WiFi premium</li>
-                                <li><i class="fas fa-tv"></i> Smart TV 55"</li>
-                                <li><i class="fas fa-snowflake"></i> Aire acondicionado</li>
-                                <li><i class="fas fa-bath"></i> Baño con jacuzzi</li>
-                                <li><i class="fas fa-coffee"></i> Minibar premium</li>
-                                <li><i class="fas fa-concierge-bell"></i> Servicio a la habitación</li>
-                            </ul>
-                            <div class="room-actions">
-                                <a href="reserva.html?room=suite" class="btn-primary">Reservar ahora</a>
-                                <a href="suite-premium.html" class="btn-secondary">Ver detalles</a>
-                            </div>
-                        </div>
+                        <div class="room-price luxury">Lujo $200/noche</div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Características generales -->
-        <section class="features-section">
-            <div class="container">
-                <h2>Servicios en todas nuestras habitaciones</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-wifi"></i>
-                        <h3>WiFi Gratis</h3>
-                        <p>Conexión de alta velocidad en todas las áreas</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Desayuno Incluido</h3>
-                        <p>Desayuno buffet con productos frescos todas las mañanas</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-swimming-pool"></i>
-                        <h3>Piscina</h3>
-                        <p>Acceso a nuestra piscina climatizada todo el año</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-parking"></i>
-                        <h3>Estacionamiento</h3>
-                        <p>Estacionamiento gratuito para todos nuestros huéspedes</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
+    <!-- Servicios Generales -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Servicios en todas nuestras habitaciones</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-wifi"></i>
+                    <h3>WiFi Gratis</h3>
+                    <p>Conexión de alta velocidad en todas las áreas</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Desayuno Incluido</h3>
+                    <p>Desayuno buffet con productos frescos todas las mañanas</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-swimming-pool"></i>
+                    <h3>Piscina</h3>
+                    <p>Acceso a nuestra piscina climatizada todo el año</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-parking"></i>
+                    <h3>Estacionamiento</h3>
+                    <p>Estacionamiento gratuito para todos nuestros huéspedes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -157,11 +148,11 @@
                     <p><i class="fas fa-envelope"></i> info@hotelparaiso.com</p>
                 </div>
                 <div class="footer-section">
-                        <h5> Más detalles en <a href="contacto.html">Contacto</a></h5>
+                    <h5> Más detalles en <a href="contacto.html">Contacto</a></h5>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Hotel . Todos los derechos reservados.</p>
+                <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,140 @@
+/* ==========================================
+   ESTILOS LOGIN - HOTEL PARANGACUTIRIMICUARO
+========================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fondo general */
+body {
+    background: linear-gradient(120deg, #d08446, #e0a672);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.login-container {
+    background-color: white;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+    position: relative;
+}
+
+/* Título */
+.login-container h1 {
+    color: #d08446;
+    margin-bottom: 25px;
+}
+
+/* Subtexto */
+.login-container p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Campos de texto */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #d08446;
+    box-shadow: 0 0 5px rgba(208, 132, 70, 0.5);
+}
+
+/* Botón principal */
+.login-container button {
+    background-color: #d08446;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #b6682d;
+    transform: scale(1.03);
+}
+
+/* Enlaces */
+.login-container a {
+    display: block;
+    margin-top: 15px;
+    color: #d08446;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+    color: #b6682d;
+    text-decoration: underline;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón o "X" para volver al inicio */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #d08446;
+    font-weight: bold;
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #b6682d;
+}
+
+
+/* Responsive (móviles) */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 25px;
+        width: 90%;
+    }
+
+    .login-container h1 {
+        font-size: 1.5rem;
+    }
+}
