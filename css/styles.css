@@ -1,4 +1,6 @@
-/* Reset y estilo base */
+/* ==============================
+   RESET Y ESTILO BASE
+============================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,86 +8,239 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fffaf5;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
     width: 100%;
     overflow-x: hidden;
 }
 
+/* ==============================
+   IMAGEN DE PORTADA
+============================== */
 .imgheader {
     width: 100%;
-    max-height: 500px;
+    max-height: 550px;
     overflow: hidden;
+    position: relative;
 }
 
 .imgheader img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
-    overflow: hidden;
+    filter: brightness(0.8);
 }
 
-/* Header sticky */
+/* ==============================
+   HEADER STICKY + NAV
+============================== */
 .header {
-    background-color: rgba(208, 132, 70, 0.7);
+    background-color: rgba(208, 132, 70, 0.9);
     color: white;
     width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
     position: sticky;
     top: 0;
-    padding: 10px 20px;
     z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    padding: 15px 30px;
 }
 
 .linkser a,
 .linklog a {
     text-decoration: none;
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     font-weight: bold;
+    font-size: 1.05rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .linkser a:hover,
 .linklog a:hover {
-    text-decoration: underline;
+    color: #ffd9b3;
+    transform: scale(1.1);
 }
 
-/* Sección bienvenida */
-.bienvenida {
-    padding: 20px;
+/* ==============================
+   SECCIÓN PRINCIPAL / PRESENTACIÓN
+============================== */
+.presentacion {
+    padding: 50px 20px;
     max-width: 1000px;
     text-align: center;
 }
 
-.bienvenida h1 {
-    margin-bottom: 15px;
+.presentacion h1 {
     color: #d08446;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
-.bienvenida p {
+.presentacion p {
     font-size: 1.1rem;
-    line-height: 1.5rem;
-    color: #333;
+    line-height: 1.7rem;
+    color: #444;
+    margin-bottom: 20px;
 }
 
-/* Footer */
+.boton {
+    display: inline-block;
+    background-color: #d08446;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #b6682d;
+    transform: scale(1.05);
+}
+
+.boton.grande {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+/* ==============================
+   SECCIÓN PROMOCIONES
+============================== */
+.promociones {
+    background-color: #fff3e6;
+    width: 100%;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.promociones h2 {
+    color: #d08446;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.promo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.promo {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.promo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.promo h3 {
+    margin: 15px 0;
+    color: #b15e23;
+}
+
+.promo p {
+    padding: 0 15px 20px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ==============================
+   TESTIMONIOS
+============================== */
+.testimonios {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fef8f3;
+}
+
+.testimonios h2 {
+    color: #d08446;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.testi-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.testi {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    transition: transform 0.3s ease;
+}
+
+.testi:hover {
+    transform: translateY(-5px);
+}
+
+.testi h4 {
+    margin-top: 10px;
+    color: #d08446;
+    font-weight: normal;
+}
+
+/* ==============================
+   LLAMADO A LA ACCIÓN (CTA)
+============================== */
+.cta {
+    text-align: center;
+    background: linear-gradient(90deg, #d08446, #e0a672);
+    color: white;
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
 footer {
     background-color: #d08446;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px;
+    width: 100%;
+    margin-top: 40px;
 }
 
 footer a {
@@ -93,20 +248,37 @@ footer a {
     text-decoration: underline;
 }
 
-/* Responsive para móviles */
-@media screen and (max-width: 480px) {
-    .header {
+footer p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media screen and (max-width: 768px) {
+    .promo-container, .testi-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header nav {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .presentacion h1 {
+        font-size: 1.8rem;
+    }
+
+    .boton {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     .imgheader img {
         height: 300px;
-        /* altura menor en móvil */
-    }
-
-    .linkser a,
-    .linklog a {
-        margin: 5px;
     }
 }
