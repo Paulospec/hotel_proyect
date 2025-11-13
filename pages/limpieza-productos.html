@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos Utilizados - Hotel Paraíso</title>
+  <link rel="stylesheet" href="../css/limpieza.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="#">🏨 Hotel Paraíso</a></div>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/limpieza-habitaciones.html">Habitaciones</a>
+      <a href="../pages/limpieza-reabastecimiento.html">Reabastecimiento</a>
+      <a href="#" class="active">Productos</a>
+    </nav>
+  </header>
+
+  <section class="limpieza-hero">
+    <h1>Registro de Productos Utilizados</h1>
+    <p>Anota los productos usados en la limpieza de cada habitación.</p>
+  </section>
+
+  <main class="container">
+    <form id="form-productos">
+      <label for="habitacion">Habitación:</label>
+      <select id="habitacion" name="habitacion" required>
+        <option value="">Seleccionar...</option>
+        <option>101</option><option>102</option><option>103</option><option>104</option><option>105</option>
+      </select>
+
+      <label for="productos">Productos utilizados:</label>
+      <textarea id="productos" name="productos" placeholder="Ejemplo: Detergente, Desinfectante..." required></textarea>
+
+      <button type="submit">Guardar</button>
+    </form>
+
+    <div id="mensaje" class="success-message" style="display:none;">
+      ✅ Productos registrados correctamente (vista previa)
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-productos');
+    const mensaje = document.getElementById('mensaje');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      mensaje.style.display = 'block';
+      form.reset();
+      setTimeout(() => mensaje.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

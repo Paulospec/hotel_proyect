@@ -190,3 +190,42 @@ button:hover {
         font-size: 0.95rem;
     }
 }
+/* ==========================
+   NUEVO PANEL DE ACCESOS
+========================== */
+.panel-opciones {
+    text-align: center;
+}
+
+.botones-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.btn-funcion {
+    background-color: #d08446;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-funcion:hover {
+    background-color: #b66b32;
+    transform: translateY(-5px);
+}
+
+/* Mensaje motivacional */
+#mensaje-motivacional {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    font-weight: 500;
+}

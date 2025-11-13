@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check de Habitaciones Limpias - Hotel Paraíso</title>
+  <link rel="stylesheet" href="../css/limpieza.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="#">🏨 Hotel Paraíso</a></div>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/limpieza-productos.html">Productos</a>
+      <a href="../pages/limpieza-reabastecimiento.html">Reabastecimiento</a>
+      <a href="#" class="active">Habitaciones</a>
+    </nav>
+  </header>
+
+  <section class="limpieza-hero">
+    <h1>Check de Habitaciones Limpias</h1>
+    <p>Marca las habitaciones que ya fueron limpiadas.</p>
+  </section>
+
+  <main class="container">
+    <form id="form-habitaciones">
+      <div class="habitaciones-lista">
+        <label><input type="checkbox" name="habitacion" value="101"> Habitación 101</label><br>
+        <label><input type="checkbox" name="habitacion" value="102"> Habitación 102</label><br>
+        <label><input type="checkbox" name="habitacion" value="103"> Habitación 103</label><br>
+        <label><input type="checkbox" name="habitacion" value="104"> Habitación 104</label><br>
+        <label><input type="checkbox" name="habitacion" value="105"> Habitación 105</label><br>
+      </div>
+      <button type="submit">Guardar registro</button>
+    </form>
+
+    <div id="mensaje" class="success-message" style="display:none;">
+      ✅ Registro guardado correctamente (vista previa)
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-habitaciones');
+    const mensaje = document.getElementById('mensaje');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      mensaje.style.display = 'block';
+      form.reset();
+      setTimeout(() => mensaje.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

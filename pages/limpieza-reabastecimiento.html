@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Reabastecimiento - Hotel Paraíso</title>
+  <link rel="stylesheet" href="../css/limpieza.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo"><a href="#">🏨 Hotel Paraíso</a></div>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/limpieza-habitaciones.html">Habitaciones</a>
+      <a href="../pages/limpieza-productos.html">Productos</a>
+      <a href="#" class="active">Reabastecimiento</a>
+    </nav>
+  </header>
+
+  <section class="limpieza-hero">
+    <h1>Solicitud de Reabastecimiento</h1>
+    <p>Reporta los productos faltantes para el almacén de limpieza.</p>
+  </section>
+
+  <main class="container">
+    <form id="form-reabastecimiento">
+      <label for="producto">Producto faltante:</label>
+      <input type="text" id="producto" name="producto" placeholder="Ejemplo: Cloro, Guantes..." required>
+
+      <label for="cantidad">Cantidad solicitada:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+      <label for="comentario">Comentario (opcional):</label>
+      <textarea id="comentario" name="comentario" placeholder="Ejemplo: Urgente para mañana..."></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <div id="mensaje" class="success-message" style="display:none;">
+      📬 Solicitud enviada correctamente (vista previa)
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-reabastecimiento');
+    const mensaje = document.getElementById('mensaje');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      mensaje.style.display = 'block';
+      form.reset();
+      setTimeout(() => mensaje.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>
