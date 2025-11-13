@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Limpieza - Hotel Paraíso</title>
+  <link rel="stylesheet" href="../css/limpieza.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="#">🏨 Hotel Paraíso</a>
+    </div>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../pages/habitaciones.html">Habitaciones</a>
+      <a href="../pages/contacto.html">Contacto</a>
+      <a href="#" class="active">Limpieza</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="limpieza-hero">
+    <h1>Panel del Personal de Limpieza</h1>
+    <p>Registra los productos utilizados y notifica al administrador si falta algo en el almacén.</p>
+  </section>
+
+  <!-- Formulario -->
+  <main class="container">
+    <h2>Registro de Limpieza</h2>
+    <form id="form-limpieza">
+      <label for="habitacion">Habitación limpiada:</label>
+      <select id="habitacion" name="habitacion" required>
+        <option value="">Seleccionar...</option>
+        <option value="101">101</option>
+        <option value="102">102</option>
+        <option value="103">103</option>
+        <option value="104">104</option>
+        <option value="105">105</option>
+      </select>
+
+      <label for="productos">Productos utilizados:</label>
+      <textarea id="productos" name="productos" placeholder="Ejemplo: Detergente, Desinfectante, Paños..." required></textarea>
+
+      <label for="faltantes">¿Faltó algún producto?</label>
+      <select id="faltantes" name="faltantes" required>
+        <option value="no">No</option>
+        <option value="sí">Sí</option>
+      </select>
+
+      <div id="notificacion" style="display:none;">
+        <label for="detalle_faltantes">Detalle de los productos faltantes:</label>
+        <textarea id="detalle_faltantes" name="detalle_faltantes" placeholder="Ejemplo: Falta cloro y guantes de limpieza..."></textarea>
+      </div>
+
+      <button type="submit">Guardar Registro</button>
+    </form>
+
+    <div id="mensaje" class="success-message" style="display:none;">
+      ✅ Registro guardado (solo vista previa, sin conexión PHP todavía)
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Hotel Paraíso. Todos los derechos reservados.</p>
+    <div class="footer-bottom">
+      <a href="../pages/contacto.html">Contáctanos</a> | 
+      <a href="../pages/habitaciones.html">Ver habitaciones</a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const faltantes = document.getElementById('faltantes');
+    const notificacion = document.getElementById('notificacion');
+    const form = document.getElementById('form-limpieza');
+    const mensaje = document.getElementById('mensaje');
+
+    faltantes.addEventListener('change', () => {
+      notificacion.style.display = (faltantes.value === 'sí') ? 'block' : 'none';
+    });
+
+    // Simulación de guardado local
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      mensaje.style.display = 'block';
+      form.reset();
+      notificacion.style.display = 'none';
+      setTimeout(() => mensaje.style.display = 'none', 3000);
+    });
+  </script>
+</body>
+</html>

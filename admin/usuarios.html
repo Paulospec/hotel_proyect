@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios | Panel Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="logo">🏨 Hotel Paraíso</div>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="usuarios.html" class="active">Usuarios</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="reportes.html">Reportes</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <h1>Gestión de Usuarios</h1>
+        <p>Administra los usuarios registrados en el sistema.</p>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Juan Pérez</td>
+                    <td>juan@hotel.com</td>
+                    <td>Cliente</td>
+                    <td>
+                        <button class="btn-secondary">Editar</button>
+                        <button class="btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>María López</td>
+                    <td>maria@hotel.com</td>
+                    <td>Administrador</td>
+                    <td>
+                        <button class="btn-secondary">Editar</button>
+                        <button class="btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="#" class="btn">➕ Agregar Usuario</a>
+    </main>
+
+    <footer class="admin-footer">
+        <p>© 2025 Hotel Paraíso</p>
+    </footer>
+</body>
+</html>

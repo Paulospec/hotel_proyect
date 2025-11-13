@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | Hotel Paraíso</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="logo">🏨 Hotel Paraíso</div>
+        <nav>
+            <a href="admin.html" class="active">Dashboard</a>
+            <a href="usuarios.html">Usuarios</a>
+            <a href="habitaciones.html">Habitaciones</a>
+            <a href="reportes.html">Reportes</a>
+            <a href="../php/logout.php">Cerrar sesión</a>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-welcome">
+            <h1>Bienvenido, Administrador</h1>
+            <p>Gestione los usuarios, habitaciones y revise los reportes del sistema.</p>
+        </section>
+
+        <section class="admin-cards">
+            <div class="admin-card">
+                <h2>👤 Usuarios</h2>
+                <p>Administre las cuentas de los usuarios registrados.</p>
+                <a href="usuarios.html" class="btn">Gestionar</a>
+            </div>
+            <div class="admin-card">
+                <h2>🏨 Habitaciones</h2>
+                <p>Modifique precios, disponibilidad o cree nuevas habitaciones.</p>
+                <a href="habitaciones.html" class="btn">Editar</a>
+            </div>
+            <div class="admin-card">
+                <h2>📊 Reportes</h2>
+                <p>Revise las reservas, ingresos y estadísticas del hotel.</p>
+                <a href="reportes.html" class="btn">Ver</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="admin-footer">
+        <p>© 2025 Hotel Paraíso - Panel de Administración</p>
+    </footer>
+</body>
+</html>
